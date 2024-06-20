@@ -53,7 +53,11 @@ wsServer.on("connection", socket => {
   })
 
   // 닉네임
-  socket.on("nickname", (nickname) => (socket["nickname"] = nickname));
+  socket.on("nickname", (nickname) => {
+    socket["nickname"] = nickname
+    console.log(socket["nickname"])
+  });
+
 })
 
 

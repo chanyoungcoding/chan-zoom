@@ -48,6 +48,9 @@ function handleMessageSubmit(event) {
     updateMessage(`You: ${value}`);
   });
   input.value = "";
+  
+  //test
+  socket.emit("nickname", "chanNickname")
 }
 
 form.addEventListener("submit", handleRoomSubmit)
